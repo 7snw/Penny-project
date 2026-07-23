@@ -7,6 +7,10 @@ All the tiles are from "https://github.com/FluffyStuff/riichi-mahjong-tiles.git"
 
 Regarding the video, unfortunately, due to my working conditions, I couldn't make it yet, and also this is the reason that I made the game with HTML, CSS, and JS and not with React
 
+to make the game work kindly download all teh repository and it will work 
+
 I appreciate this chance, and I hope to hear from you as soon as possible. 
 
+Created by Hasan Yahya Saleh Abdulqaher 
+Email is HasanAbdulqaher@hotmail.com
 
