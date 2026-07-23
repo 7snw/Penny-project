@@ -1,0 +1,734 @@
+/* =====================================
+   GAME CONTAINER
+===================================== */
+
+.game-container {
+  width: 95%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 0 60px;
+}
+
+
+/* =====================================
+   GAME HEADER
+===================================== */
+
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+
+/* =====================================
+   EXIT BUTTON
+===================================== */
+
+.exit-btn {
+  background: #c0392b;
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.exit-btn:hover {
+  background: #e74c3c;
+  transform: translateY(-2px);
+}
+
+
+/* =====================================
+   DECK INFORMATION
+===================================== */
+
+.deck-info {
+  display: flex;
+  gap: 15px;
+}
+
+.deck-box {
+  min-width: 100px;
+  background: #174b3d;
+  padding: 12px 20px;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.deck-label {
+  display: block;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.8rem;
+  margin-bottom: 5px;
+}
+
+.deck-box strong {
+  display: block;
+  font-size: 1.6rem;
+  color: #d4af37;
+}
+
+
+/* =====================================
+   SCORE
+===================================== */
+
+.score-section {
+  text-align: center;
+}
+
+.score-section h2 {
+  font-size: 1rem;
+  font-weight: normal;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.score-section h1 {
+  color: #d4af37;
+  font-size: 4rem;
+  line-height: 1;
+  margin-top: 15px;
+}
+
+
+/* =====================================
+   HAND SECTION
+===================================== */
+
+.hand-section {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.hand-section h2 {
+  color: white;
+  font-size: 1.5rem;
+}
+
+
+/* =====================================
+   TILES CONTAINER
+===================================== */
+
+.tiles {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  gap: 18px;
+
+  margin: 35px 0;
+
+  flex-wrap: wrap;
+
+  min-height: 180px;
+}
+
+
+/* =====================================
+   INDIVIDUAL TILE CARD
+===================================== */
+
+.tile {
+  width: 100px;
+
+  min-height: 165px;
+
+  background: #174b3d;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 12px;
+
+  padding: 8px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: flex-start;
+
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.25);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+
+  flex-shrink: 0;
+}
+
+.tile:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 15px 30px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =====================================
+   TILE IMAGE
+===================================== */
+
+.tile-image {
+  width: 80px;
+
+  height: 105px;
+
+  object-fit: contain;
+
+  display: block;
+
+  background: white;
+
+  border-radius: 6px;
+
+  padding: 2px;
+}
+
+
+/* =====================================
+   TILE NAME
+===================================== */
+
+.tile-name {
+  width: 100%;
+
+  margin-top: 7px;
+
+  color: white;
+
+  font-size: 0.75rem;
+
+  font-weight: bold;
+
+  text-align: center;
+
+  line-height: 1.2;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+
+/* =====================================
+   TILE POINTS
+===================================== */
+
+.tile-points {
+  margin-top: 5px;
+
+  color: #d4af37;
+
+  font-size: 0.75rem;
+
+  font-weight: bold;
+
+  text-align: center;
+}
+
+
+/* =====================================
+   HAND TOTAL
+===================================== */
+
+.hand-total {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 10px;
+
+  font-size: 1.1rem;
+}
+
+.hand-total span {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.hand-total strong {
+  color: #d4af37;
+
+  font-size: 1.5rem;
+}
+
+
+/* =====================================
+   BET SECTION
+===================================== */
+
+.bet-section {
+  margin-top: 50px;
+
+  text-align: center;
+}
+
+.bet-instruction {
+  color: rgba(255, 255, 255, 0.7);
+
+  margin-bottom: 20px;
+}
+
+
+/* =====================================
+   BET BUTTONS
+===================================== */
+
+.bet-buttons {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 20px;
+}
+
+.bet-btn {
+  min-width: 200px;
+
+  padding: 18px 30px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  color: white;
+
+  font-family: inherit;
+
+  font-size: 1rem;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.bet-btn:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.higher-btn {
+  background: #27ae60;
+}
+
+.higher-btn:hover {
+  background: #2ecc71;
+}
+
+.lower-btn {
+  background: #c0392b;
+}
+
+.lower-btn:hover {
+  background: #e74c3c;
+}
+
+
+/* =====================================
+   HISTORY
+===================================== */
+
+.history {
+  margin-top: 70px;
+
+  background: #174b3d;
+
+  border-radius: 15px;
+
+  padding: 25px;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.history-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 20px;
+}
+
+.history-header h2 {
+  color: #d4af37;
+}
+
+.history-header span {
+  color: rgba(255, 255, 255, 0.5);
+
+  font-size: 0.85rem;
+}
+
+
+/* =====================================
+   HISTORY ITEM
+===================================== */
+
+.history-item {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 15px 5px;
+
+  border-bottom:
+    1px solid rgba(255, 255, 255, 0.1);
+
+  gap: 15px;
+}
+
+.history-item:last-child {
+  border-bottom: none;
+}
+
+.history-value {
+  color: #d4af37;
+
+  font-weight: bold;
+
+  font-size: 1.2rem;
+}
+
+
+/* =====================================
+   HISTORY TILES
+===================================== */
+
+.history-tiles {
+  display: flex;
+
+  gap: 5px;
+
+  align-items: center;
+}
+
+.history-tile-image {
+  width: 35px;
+
+  height: 50px;
+
+  object-fit: contain;
+
+  background-color: whitesmoke;
+
+  border-radius: 4px;
+}
+
+.empty-history {
+  text-align: center;
+
+  padding: 25px;
+
+  color: rgba(255, 255, 255, 0.4);
+}
+
+
+/* =====================================
+   RESULT MODAL
+===================================== */
+
+.modal {
+  position: fixed;
+
+  inset: 0;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  padding: 20px;
+
+  background: rgba(0, 0, 0, 0.75);
+
+  z-index: 1000;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+
+/* =====================================
+   MODAL CONTENT
+===================================== */
+
+.modal-content {
+  width: 100%;
+
+  max-width: 450px;
+
+  background: #174b3d;
+
+  padding: 40px;
+
+  border-radius: 20px;
+
+  text-align: center;
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.5);
+
+  animation:
+    modalAppear 0.3s ease;
+}
+
+.modal-content h1 {
+  color: #d4af37;
+
+  margin-bottom: 30px;
+}
+
+
+/* =====================================
+   RESULT DETAILS
+===================================== */
+
+.result-details {
+  margin-bottom: 25px;
+}
+
+.result-row {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 15px 0;
+
+  border-bottom:
+    1px solid rgba(255, 255, 255, 0.1);
+}
+
+.result-row:last-child {
+  border-bottom: none;
+}
+
+.result-row span {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.result-row strong {
+  color: #d4af37;
+
+  font-size: 1.3rem;
+}
+
+
+/* =====================================
+   CONTINUE BUTTON
+===================================== */
+
+.continue-btn {
+  width: 100%;
+
+  padding: 15px;
+
+  background: #d4af37;
+
+  color: #222;
+
+  border: none;
+
+  border-radius: 10px;
+
+  font-family: inherit;
+
+  font-weight: bold;
+
+  font-size: 1rem;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.continue-btn:hover {
+  background: #e2bd45;
+
+  transform: translateY(-2px);
+}
+
+
+/* =====================================
+   MODAL ANIMATION
+===================================== */
+
+@keyframes modalAppear {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(20px)
+      scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+
+}
+
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (max-width: 768px) {
+
+  .game-container {
+    width: 92%;
+
+    padding-top: 20px;
+  }
+
+  .game-header {
+    margin-bottom: 40px;
+  }
+
+  .tile {
+    width: 90px;
+
+    min-height: 150px;
+  }
+
+  .tile-image {
+    width: 70px;
+
+    height: 95px;
+  }
+
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 600px) {
+
+  .game-header {
+    flex-direction: column;
+
+    gap: 20px;
+
+    align-items: stretch;
+  }
+
+  .exit-btn {
+    width: 100%;
+  }
+
+  .deck-info {
+    width: 100%;
+  }
+
+  .deck-box {
+    flex: 1;
+  }
+
+  .score-section h1 {
+    font-size: 3rem;
+  }
+
+  .tiles {
+    gap: 10px;
+
+    margin-top: 25px;
+  }
+
+  .tile {
+    width: 75px;
+
+    min-height: 130px;
+
+    padding: 6px;
+  }
+
+  .tile-image {
+    width: 60px;
+
+    height: 80px;
+  }
+
+  .tile-name {
+    font-size: 0.65rem;
+  }
+
+  .tile-points {
+    font-size: 0.65rem;
+  }
+
+  .bet-buttons {
+    flex-direction: column;
+
+    align-items: center;
+  }
+
+  .bet-btn {
+    width: 100%;
+
+    max-width: 350px;
+  }
+
+  .history-header {
+    flex-direction: column;
+
+    gap: 5px;
+
+    align-items: flex-start;
+  }
+
+  .history-item {
+    gap: 10px;
+
+    flex-wrap: wrap;
+  }
+
+  .history-tiles {
+    font-size: 1rem;
+  }
+
+  .modal-content {
+    padding: 30px 20px;
+  }
+
+}

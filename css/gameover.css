@@ -1,0 +1,196 @@
+.gameover-card{
+
+    width:500px;
+
+    max-width:90%;
+
+    margin:100px auto;
+
+    background:#174B3D;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+}
+
+.gameover-card h1{
+
+    color:#D4AF37;
+
+}
+
+#finalScore{
+
+    font-size:5rem;
+
+    margin:30px 0;
+
+    color:#D4AF37;
+
+}
+
+input{
+
+    width:100%;
+
+    padding:15px;
+
+    margin:20px 0;
+
+    border-radius:10px;
+
+    border:none;
+
+}
+
+/* =====================================
+   GAME OVER BUTTONS
+===================================== */
+
+.gameover-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 30px;
+
+    flex-wrap: wrap;
+}
+
+
+/* =====================================
+   ALL GAME OVER BUTTONS
+===================================== */
+
+.gameover-btn {
+    min-width: 170px;
+
+    padding: 15px 25px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    font-family: inherit;
+
+    font-size: 1rem;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    color: white;
+
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* =====================================
+   SAVE SCORE
+===================================== */
+
+.save-btn {
+    background: #d4af37;
+
+    color: #222;
+}
+
+.save-btn:hover {
+    background: #e2bd45;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(0, 0, 0, 0.3);
+}
+
+
+/* =====================================
+   PLAY AGAIN
+===================================== */
+
+.play-again-btn {
+    background: #27ae60;
+}
+
+.play-again-btn:hover {
+    background: #2ecc71;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(0, 0, 0, 0.3);
+}
+
+
+/* =====================================
+   HOME
+===================================== */
+
+.home-btn {
+    background: #174b3d;
+
+    border:
+        1px solid
+        rgba(212, 175, 55, 0.5);
+}
+
+.home-btn:hover {
+    background: #21604e;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(0, 0, 0, 0.3);
+}
+
+
+/* =====================================
+   DISABLED SAVE BUTTON
+===================================== */
+
+.save-btn:disabled {
+    background: #777;
+
+    color: #ddd;
+
+    cursor: not-allowed;
+
+    transform: none;
+
+    box-shadow: none;
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 600px) {
+
+    .gameover-buttons {
+        flex-direction: column;
+
+        width: 100%;
+    }
+
+    .gameover-btn {
+        width: 100%;
+
+        max-width: 350px;
+    }
+
+}

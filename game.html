@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Hand Betting Game</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="stylesheet" href="css/game.css" />
+  </head>
+
+  <body>
+    <div class="game-container">
+      <header class="game-header">
+        <button id="exitBtn" class="exit-btn">← Exit</button>
+
+        <div class="deck-info">
+          <div class="deck-box">
+            <span class="deck-label"> Draw </span>
+
+            <strong id="drawCount">0</strong>
+          </div>
+
+          <div class="deck-box">
+            <span class="deck-label"> Discard </span>
+
+            <strong id="discardCount"> 0 </strong>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="score-section">
+          <h2>Current Score</h2>
+
+          <h1 id="score">0</h1>
+        </section>
+
+        <section class="hand-section">
+          <h2>Current Hand</h2>
+
+          <div id="handTiles" class="tiles">
+            <!-- JavaScript adds the real Mahjong tile photos here -->
+          </div>
+
+          <div class="hand-total">
+            <span> Total Value </span>
+
+            <strong id="handTotal">0</strong>
+          </div>
+        </section>
+
+        <section class="bet-section">
+          <p class="bet-instruction">Will the next hand be higher or lower?</p>
+
+          <div class="bet-buttons">
+            <button id="higherBtn" class="bet-btn higher-btn">
+              ↑ Bet Higher
+            </button>
+
+            <button id="lowerBtn" class="bet-btn lower-btn">↓ Bet Lower</button>
+          </div>
+        </section>
+
+        <section class="history">
+          <div class="history-header">
+            <h2>History</h2>
+
+            <span> Previous Hands </span>
+          </div>
+
+          <div id="historyList">
+            <div class="empty-history">No previous hands yet.</div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div id="resultModal" class="modal hidden">
+      <div class="modal-content">
+        <h1 id="resultTitle">🎉 You Won</h1>
+
+        <div class="result-details">
+          <div class="result-row">
+            <span> Previous Hand </span>
+
+            <strong id="oldValue"> 18 </strong>
+          </div>
+
+          <div class="result-row">
+            <span> Current Hand </span>
+
+            <strong id="newValue"> 23 </strong>
+          </div>
+        </div>
+
+        <button id="continueBtn" class="continue-btn">Continue</button>
+      </div>
+    </div>
+
+    <script src="js/tiles.js"></script>
+    <script src="js/deck.js"></script>
+    <script src="js/game.js"></script>
+    
+  </body>
+</html>
